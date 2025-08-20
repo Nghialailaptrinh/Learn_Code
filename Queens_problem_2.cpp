@@ -1,12 +1,18 @@
 ﻿//Queens problem
 //Bài toán Xếp hậu
 //Liệt ke k <=n con hậu trong bàn cờ nxn sao cho chúng không thể ăn lần nhau vaf không chế tất cả cả ô cảu bàn cờ, tất nhiên không phải với cặp số k, n nào cũng có lời giải
-/*Quy ước i là dòng, i là cột, đường chéo góc 45 độ là i + j = const value, góc -45 độ là i - j = const value
-với mội con hậu gắn với một giá trị i, ta tìm giá trị j duy nhất ứng với mỗi quân hậu sao cho nó không đứng vào vị trí hai đường chéo của các con hậu đã được đặt
 
-2<=i+j<= n*2;
-1<=i-j +n <=2*n-1
-*/
+//Quy ước i là dòng, i là cột, đường chéo góc 45 độ là i + j = const value, góc -45 độ là i - j = const value
+//với mội con hậu gắn với một giá trị i, ta tìm giá trị j duy nhất ứng với mỗi quân hậu sao cho nó không đứng vào vị trí hai đường chéo của các con hậu đã được đặt
+
+//2<=i+j<= n*2;
+//1<=i-j +n <=2*n-1
+
+
+//Số liệu tối thiểu cho k ứng với n để các bạn có thể nhập vào
+//n  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+//k  1  1  1  3  3  4  4  5  5  5  5  7  7  8  9
+
 #include <iostream>
 using namespace std;
 
@@ -16,7 +22,7 @@ int countSolution = 0;
 
 // Kiểm tra ô (i, j) có bị khống chế không
 bool under_attack(int i, int j) {
-    return row[i] || col[j] || Dia45[i + j] || Dia_45[i - j + n];
+    return row[i] || col[j] || Dia45[i + j] || dia_45[i - j + n];
 }
 
 // In lời giải
