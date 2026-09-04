@@ -4,4 +4,4 @@
 
 Các code này khá cơ bản và cổ điển
 
-Code chạy tốt trên Visual Studio và CodeBlock
+Ưu tiên thời gian chạy và cấu trúc dễ hiểu
